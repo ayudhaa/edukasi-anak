@@ -88,16 +88,16 @@ const ShapeGame = ({ onGameComplete, totalQuestions }) => {
 
   const showWrongNotification = () => {
     const messages = [
-      { title: 'Oops😅', message: 'Bentuk itu adalah <b>' + currentShape.name + '</b>' },
-      { title: 'Salah Dikit🤔', message: 'Bukan itu bentuknya <b>' + currentShape.name + '</b>' },
-      { title: 'Aduh💫', message: 'Hampir Bentuk yang benar <b>' + currentShape.name + '</b>' }
+      { title: 'Oops😅', message: 'Bentuk itu adalah <b>' + currentShape.name.toLowerCase() + '</b>' },
+      { title: 'Salah Dikit🤔', message: 'Bukan itu bentuknya <b>' + currentShape.name.toLowerCase() + '</b>' },
+      { title: 'Aduh💫', message: 'Bentuk yang benar adalah <b>' + currentShape.name.toLowerCase() + '</b>' }
     ]
     
     const randomMsg = messages[Math.floor(Math.random() * messages.length)]
     
     Notiflix.Report.warning(
       randomMsg.title,
-      randomMsg.message + '<br/> jangan sedih, ayooo coba lagi😊',
+      randomMsg.message + '<br/> jangan sedih yaa, ayooo coba lagi😊',
       'Siap 💪',
       {
         width: '400px',
