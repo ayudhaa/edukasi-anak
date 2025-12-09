@@ -151,7 +151,7 @@ function App() {
           <span className="animate-bounce" style={{animationDelay: '0.8s'}}>🐱</span>
         </div>
         <p className="text-child-xl text-purple-600 font-comic font-bold">
-          Belajar sambil bermain itu seru! 🎮
+          Belajar sambil bermain itu seru🎮
         </p>
       </header>
 
