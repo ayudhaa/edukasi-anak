@@ -140,7 +140,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-pink-50 to-yellow-50 p-4 md:p-8">
       <header className="text-center mb-8 animate-bounce-slow">
-        <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+        <h1 className="text-child-4xl md:text-child-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4 font-nunito">
           Dunia Belajar Anak
         </h1>
         <div className="flex justify-center gap-4 text-4xl mb-4">
@@ -150,8 +150,8 @@ function App() {
           <span className="animate-bounce" style={{animationDelay: '0.6s'}}>🎈</span>
           <span className="animate-bounce" style={{animationDelay: '0.8s'}}>🐱</span>
         </div>
-        <p className="text-xl md:text-2xl text-purple-600 font-medium">
-          Belajar sambil bermain itu seru🎮
+        <p className="text-child-xl text-purple-600 font-comic font-bold">
+          Belajar sambil bermain itu seru! 🎮
         </p>
       </header>
 

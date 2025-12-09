@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Comic+Neue:wght@400;700&display=swap');
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -12,6 +13,12 @@
   50% { transform: translateY(-20px); }
 }
 
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -20,20 +27,103 @@
   animation: bounce 0.5s ease infinite;
 }
 
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
 body {
-  font-family: 'Comic Sans MS', 'Chilanka', cursive, sans-serif;
+  font-family: 'Nunito', 'Comic Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+button {
+  font-family: 'Comic Neue', 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.game-text {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.number-display {
+  font-family: 'Comic Neue', monospace;
+  font-weight: 700;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 10px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #8B5CF6, #EC4899);
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+  border-radius: 12px;
+  border: 3px solid #f8fafc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7c3aed, #db2777);
+}
+
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: #1f2937;
+}
+
+:focus {
+  outline: 3px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  body {
+    color: #000;
+  }
+  
+  button {
+    border: 3px solid #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-bounce,
+  .animate-wiggle {
+    animation: none;
+  }
 }
